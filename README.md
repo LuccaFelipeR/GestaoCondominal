@@ -1,1 +1,1 @@
-# Gest-o-Condominial
+# Gestão Condominal - Projeto
