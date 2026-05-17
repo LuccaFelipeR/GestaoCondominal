@@ -103,6 +103,51 @@ Projeto em fase de planejamento inicial para entrega da N1.
 
 ---
 
+# Requisitos Funcionais
+
+Os requisitos funcionais descrevem as funcionalidades que o sistema MoradaSync deverá oferecer aos usuários.  
+O sistema será dividido em módulos, contemplando autenticação, gestão de moradores, unidades, reservas, ocorrências, funcionários e funcionalidades gerais.
+
+## Tabela de Requisitos Funcionais do MVP
+
+| Código | Módulo | Requisito Funcional | Prioridade | Perfil/Permissão | Observações |
+|---|---|---|---|---|---|
+| RF01 | Autenticação e Segurança | O sistema deve permitir login com e-mail e senha. | Alta | Administrador e Funcionário | O usuário deverá informar credenciais válidas para acessar o sistema. |
+| RF02 | Autenticação e Segurança | O sistema deve permitir logout do usuário autenticado. | Alta | Administrador e Funcionário | Deve existir um botão de sair para encerrar a sessão. |
+| RF03 | Autenticação e Segurança | O sistema deve proteger rotas privadas por meio de autenticação. | Alta | Usuário autenticado | A proteção será feita por middleware, impedindo acesso sem login. |
+| RF04 | Autenticação e Segurança | O sistema deve controlar permissões por tipo de usuário. | Alta | Administrador e Funcionário | O perfil Administrador terá acesso completo; o perfil Funcionário terá acesso limitado conforme regras definidas. |
+| RF05 | Gestão de Moradores | O sistema deve permitir cadastrar moradores. | Alta | Administrador | O cadastro poderá conter nome, CPF, telefone, e-mail e unidade vinculada. |
+| RF06 | Gestão de Moradores | O sistema deve permitir listar moradores cadastrados. | Alta | Administrador e Funcionário | A listagem deverá exibir os dados principais dos moradores. |
+| RF07 | Gestão de Moradores | O sistema deve permitir editar dados de moradores. | Alta | Administrador | A edição deve permitir atualizar informações cadastrais. |
+| RF08 | Gestão de Moradores | O sistema deve permitir buscar moradores por nome, unidade ou CPF. | Média | Administrador | A busca facilita a localização de registros. |
+| RF09 | Gestão de Unidades | O sistema deve permitir cadastrar unidades do condomínio. | Alta | Administrador | O cadastro das unidades será realizado pela administração do condomínio. |
+| RF10 | Gestão de Unidades | O sistema deve permitir listar unidades cadastradas. | Alta | Administrador e Funcionário | A listagem deverá exibir número, bloco, tipo e status da unidade. |
+| RF11 | Gestão de Unidades | O sistema deve permitir editar unidades. | Alta | Administrador | A edição poderá alterar dados como bloco, número, tipo e status. |
+| RF12 | Gestão de Unidades | O sistema deve permitir excluir ou inativar unidades. | Alta | Administrador | Recomenda-se inativação em vez de exclusão definitiva. |
+| RF13 | Gestão de Unidades | O sistema deve permitir vincular moradores às unidades. | Alta | Administrador | Uma unidade poderá possuir um ou mais moradores vinculados. |
+| RF14 | Reservas de Áreas Comuns | O sistema deve permitir cadastrar reservas de áreas comuns. | Alta | Morador ou Administrador | O morador poderá solicitar reserva de espaços como salão de festas ou churrasqueira. |
+| RF15 | Reservas de Áreas Comuns | O sistema deve permitir listar reservas cadastradas. | Alta | Administrador e Funcionário | A administração poderá acompanhar as reservas realizadas. |
+| RF16 | Reservas de Áreas Comuns | O sistema deve permitir cancelar reservas. | Alta | Morador ou Administrador | O cancelamento deverá atualizar o status da reserva. |
+| RF17 | Reservas de Áreas Comuns | O sistema deve permitir cadastrar áreas comuns disponíveis para reserva. | Alta | Administrador | As áreas comuns podem ser pré-cadastradas na implantação do sistema. |
+| RF18 | Reservas de Áreas Comuns | O sistema deve validar conflitos de data e horário ao criar reservas. | Média | Sistema | O sistema deve impedir duas reservas no mesmo espaço, data e horário. |
+| RF19 | Gestão de Ocorrências | O sistema deve permitir registrar ocorrências. | Alta | Morador, Funcionário ou Administrador | Ocorrências podem representar manutenção, reclamações ou sugestões. |
+| RF20 | Gestão de Ocorrências | O sistema deve permitir listar ocorrências cadastradas. | Alta | Funcionário e Administrador | A listagem ajudará no acompanhamento das solicitações. |
+| RF21 | Gestão de Ocorrências | O sistema deve permitir atualizar ocorrências. | Alta | Administrador ou Funcionário | A atualização poderá alterar descrição, status, responsável ou observações. |
+| RF22 | Gestão de Ocorrências | O sistema deve permitir finalizar ocorrências. | Alta | Administrador ou Funcionário | A finalização altera o status da ocorrência para resolvida/concluída. |
+| RF23 | Gestão de Ocorrências | O sistema deve permitir cadastrar tipos de ocorrência. | Alta | Administrador | Exemplos: manutenção, reclamação, sugestão, limpeza e segurança. |
+| RF24 | Gestão de Funcionários | O sistema deve permitir cadastrar funcionários. | Alta | Administrador | O cadastro pode conter nome, CPF, cargo, telefone, e-mail e status. |
+| RF25 | Gestão de Funcionários | O sistema deve permitir listar funcionários cadastrados. | Alta | Administrador | A listagem deverá exibir os principais dados dos funcionários. |
+| RF26 | Gestão de Funcionários | O sistema deve permitir editar dados de funcionários. | Alta | Administrador | A edição permite atualizar dados cadastrais e cargo. |
+| RF27 | Gestão de Funcionários | O sistema deve permitir inativar funcionários. | Alta | Administrador | Recomenda-se inativar em vez de excluir definitivamente. |
+| RF28 | Sistema Geral | O sistema deve controlar status de reservas, ocorrências, unidades e usuários. | Alta | Sistema | Os status ajudam no acompanhamento dos registros. |
+| RF29 | Sistema Geral | O sistema deve validar campos obrigatórios nos formulários. | Alta | Sistema | Campos essenciais não devem ser enviados vazios. |
+| RF30 | Sistema Geral | O sistema deve possuir menu de navegação entre os módulos. | Alta | Usuário autenticado | O menu deve permitir acesso às principais telas do sistema. |
+| RF31 | Sistema Geral | O sistema deve permitir visualizar detalhes dos registros cadastrados. | Média | Usuário autenticado | Cada módulo poderá ter uma tela ou botão de detalhes. |
+| RF32 | Sistema Geral | O sistema deve armazenar dados em banco de dados persistente. | Alta | Sistema | O banco definido para o projeto será PostgreSQL. |
+| RF33 | Sistema Geral | O sistema deve permitir filtrar listagens por status, data ou categoria. | Média | Usuário autenticado | Filtros poderão ser aplicados em reservas, ocorrências e moradores. |
+
+---
+
 ## 10. Uso de Inteligência Artificial
 
 A Inteligência Artificial será utilizada como apoio técnico e acadêmico durante o projeto, auxiliando na organização da documentação, revisão de requisitos, explicação de conceitos, apoio na modelagem, revisão de código e preparação para a defesa técnica.
