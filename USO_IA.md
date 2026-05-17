@@ -9,146 +9,119 @@
 
 ---
 
-## 2. Ferramentas de IA Utilizadas
+## 2. Ferramenta Utilizada
 
-Durante o desenvolvimento do projeto, a equipe utilizou ferramentas de Inteligência Artificial como apoio técnico e acadêmico.
+Durante o desenvolvimento do projeto, a equipe utilizou o **ChatGPT** como ferramenta de apoio acadêmico e técnico.
 
-**Ferramentas utilizadas:**
-
-- ChatGPT
-
-A IA foi utilizada como ferramenta de apoio para organização, estudo, revisão e orientação técnica, sem substituir a responsabilidade dos integrantes da equipe.
+A ferramenta foi utilizada para auxiliar na organização de ideias, revisão de documentação, esclarecimento de conceitos e apoio ao planejamento do sistema. As decisões finais, adaptações e validações foram realizadas pelos integrantes da equipe.
 
 ---
 
-## 3. Finalidades de Uso da IA
+## 3. Finalidades de Uso
 
-A Inteligência Artificial foi utilizada para apoiar as seguintes atividades:
+A Inteligência Artificial foi utilizada como apoio nas seguintes atividades:
 
 - interpretação dos critérios do projeto;
 - organização da documentação inicial;
-- sugestão de nomes para o sistema;
-- apoio na definição de requisitos funcionais e não funcionais;
-- apoio na definição das entidades do sistema;
-- revisão dos relacionamentos do banco de dados;
-- apoio na criação da matriz de papéis e responsabilidades;
-- organização do backlog inicial;
-- explicação de conceitos técnicos;
-- preparação para a defesa técnica;
-- futura revisão de código, rotas, controllers, models e views.
+- estruturação do README.md;
+- apoio na definição do escopo do sistema;
+- apoio na organização dos requisitos funcionais e não funcionais;
+- revisão das entidades e relacionamentos do MER/DER;
+- apoio na elaboração da matriz de responsabilidades;
+- organização inicial do backlog;
+- esclarecimento de conceitos relacionados à arquitetura MVC, banco de dados e autenticação;
+- apoio na preparação da equipe para a defesa técnica.
 
 ---
 
 ## 4. Exemplos de Prompts Utilizados
 
-Alguns prompts utilizados pela equipe durante o planejamento foram:
+A equipe selecionou alguns prompts representativos utilizados durante a etapa de planejamento do projeto. Os exemplos abaixo mostram como a IA foi utilizada como apoio, sem substituir a análise e as decisões da equipe.
 
-### Prompt 1
-
-> Professor Charly, vamos começar o projeto de Gestão Condominial. Antes de criar qualquer código, me conduza pela etapa de planejamento da N1.
-
-**Finalidade:** organizar a etapa inicial do projeto e levantar as perguntas necessárias para o planejamento.
-
----
-
-### Prompt 2
-
-> Como posso começar a documentação?
-
-**Finalidade:** receber orientação para estruturar a documentação inicial do projeto no README.md e nos arquivos de planejamento.
+| Etapa | Prompt Utilizado | Resumo da Resposta Obtida | Decisão da Equipe |
+|---|---|---|---|
+| Planejamento inicial | "Professor Charly, vamos começar o projeto de Gestão Condominial. Antes de criar qualquer código, me conduza pela etapa de planejamento da N1." | A IA orientou quais informações deveriam ser levantadas antes da implementação, como equipe, CRUDs, banco de dados, requisitos, DER, protótipos e backlog. | A equipe utilizou a orientação para organizar a sequência inicial de trabalho. |
+| Organização da documentação | "Como posso começar a documentação?" | A IA sugeriu uma estrutura inicial para o README.md, incluindo visão geral, objetivo, tecnologias, arquitetura, entidades e responsabilidades. | A equipe adaptou a estrutura para o projeto MoradaSync. |
+| Nome do projeto | "Pense em nomes inovadores para um sistema de Gestão Condominial." | A IA sugeriu opções de nomes relacionados a moradia, gestão e conexão. | A equipe escolheu o nome MoradaSync por representar a ideia de sincronizar informações da gestão condominial. |
+| Requisitos funcionais | "Criamos esses requisitos de funcionalidade. Documente para mim." | A IA ajudou a organizar os requisitos por módulo, prioridade, perfil de acesso e observações. | A equipe revisou a lista, manteve os requisitos essenciais e separou funcionalidades futuras. |
+| MER/DER | "Nós criamos essas tabelas do MER e DER. Documente elas também." | A IA auxiliou na descrição das tabelas, campos, chaves primárias, chaves estrangeiras e relacionamentos. | A equipe revisou a documentação conforme o DER criado. |
+| Uso de IA | "Refine meu USO_IA.md." | A IA sugeriu uma versão mais clara e acadêmica para registrar o uso da ferramenta no projeto. | A equipe adaptou o texto para refletir o uso real da IA durante o planejamento. |
 
 ---
 
-### Prompt 3
+## 5. Contribuições Aproveitadas
 
-> Vamos definir um nome para o projeto.
+Algumas contribuições da IA foram aproveitadas pela equipe após análise e adaptação, como:
 
-**Finalidade:** gerar ideias de nomes para o sistema de Gestão Condominial.
+- organização inicial da documentação do projeto;
+- estruturação das seções do README.md;
+- melhoria na descrição do objetivo e do problema do sistema;
+- organização dos requisitos funcionais por módulo;
+- separação entre funcionalidades do MVP e melhorias futuras;
+- revisão textual da documentação;
+- apoio na explicação dos relacionamentos entre entidades;
+- sugestão de uma estrutura mais clara para a matriz de papéis e responsabilidades;
+- apoio na escrita inicial deste documento.
 
----
-
-### Prompt 4
-
-> Pense em nomes inovadores.
-
-**Finalidade:** buscar nomes mais modernos e criativos para o projeto.
-
----
-
-### Prompt 5
-
-> Me traga o que preciso colocar em USO_IA.md.
-
-**Finalidade:** estruturar o documento obrigatório de uso de Inteligência Artificial no projeto.
+Essas contribuições foram utilizadas como base de apoio, não como substituição do trabalho da equipe.
 
 ---
 
-## 5. Sugestões Aceitas pela Equipe
+## 6. Adaptações Realizadas pela Equipe
 
-A equipe aceitou algumas sugestões da IA, como:
+As sugestões recebidas foram ajustadas conforme o contexto real do projeto, a capacidade técnica da equipe e os critérios definidos para a disciplina.
 
-- organizar o projeto como um sistema de Gestão Condominial;
-- utilizar o nome MoradaSync para representar a proposta do sistema;
-- estruturar o README.md com visão geral, objetivo, tecnologias, arquitetura, entidades, equipe e responsabilidades;
-- separar os integrantes por papéis gerais e também por CRUD principal;
-- utilizar PostgreSQL como banco de dados relacional;
-- manter o sistema como um MVP simples e funcional;
-- documentar o uso da IA de forma transparente.
+Entre as principais adaptações realizadas, destacam-se:
 
----
-
-## 6. Sugestões Adaptadas pela Equipe
-
-Algumas sugestões da IA foram adaptadas conforme a realidade da equipe:
-
-- a equipe decidiu utilizar Scrum com apoio de ClickUp, Miro e Canvas;
-- os papéis dos integrantes foram mantidos, mas ajustados para também contemplar um CRUD principal por aluno;
-- os nomes sugeridos foram analisados e a equipe escolheu aquele que melhor representa a proposta do projeto;
-- a estrutura da documentação foi usada como base, mas será ajustada conforme a evolução do sistema.
+- definição do nome **MoradaSync** para o sistema;
+- escolha do **PostgreSQL** como banco de dados;
+- manutenção do projeto como um MVP acadêmico;
+- ajuste dos papéis dos integrantes para contemplar também um CRUD principal por aluno;
+- adequação das entidades ao tema Gestão Condominial;
+- revisão dos requisitos conforme o escopo possível dentro do prazo;
+- adaptação da documentação para refletir as decisões tomadas pelo grupo;
+- simplificação de algumas funcionalidades para evitar aumento excessivo de complexidade.
 
 ---
 
-## 7. Sugestões Recusadas pela Equipe
+## 7. Sugestões Não Utilizadas
 
-A equipe recusou ou evitou algumas ideias que poderiam aumentar demais o escopo do projeto, como:
+Algumas ideias foram avaliadas, mas não foram incluídas no escopo inicial por aumentarem a complexidade do projeto.
 
-- criação de funcionalidades muito avançadas para o prazo disponível;
-- desenvolvimento de um sistema condominial completo com cobrança financeira, boletos ou integrações externas;
-- uso de tecnologias fora da stack exigida pela disciplina;
-- criação de regras complexas de permissão antes da implementação básica do sistema.
+Entre elas:
 
-A equipe optou por manter um escopo simples, funcional e adequado ao projeto acadêmico.
+- recuperação de senha por e-mail, SMS ou WhatsApp;
+- envio automático de notificações;
+- cadastro completo de visitantes;
+- controle detalhado de encomendas;
+- módulo financeiro com cobranças ou boletos;
+- relatórios avançados;
+- integrações externas;
+- regras complexas de permissão logo na primeira versão;
+- criação de tabelas adicionais para funcionalidades que poderiam ser tratadas de forma mais simples no MVP.
 
----
-
-## 8. Cuidados para Evitar Cópia sem Compreensão
-
-Para garantir que o uso da IA não substitua o aprendizado da equipe, foram adotados os seguintes cuidados:
-
-- revisar todas as sugestões antes de inserir no projeto;
-- adaptar os textos e códigos à realidade da equipe;
-- discutir as decisões entre os integrantes;
-- evitar copiar código sem entender sua função;
-- estudar a lógica das rotas, controllers, models e views antes da defesa;
-- registrar no GitHub a evolução real do projeto;
-- manter commits frequentes e com mensagens claras;
-- garantir que cada integrante compreenda o CRUD pelo qual será responsável.
+Essas funcionalidades poderão ser consideradas como melhorias futuras, caso o projeto evolua após a entrega acadêmica.
 
 ---
 
-## 9. Reflexão Crítica sobre o Uso da IA
+## 8. Cuidados Adotados
 
-A Inteligência Artificial ajudou a equipe principalmente na organização das ideias, na interpretação dos critérios do projeto e na estruturação inicial da documentação. A IA também contribuiu com sugestões de nomes, entidades, relacionamentos e divisão de responsabilidades.
+Para garantir o uso responsável da ferramenta, a equipe adotou os seguintes cuidados:
 
-Apesar disso, a equipe entende que a IA não substitui o trabalho dos alunos. As sugestões precisam ser analisadas, testadas, adaptadas e compreendidas. O grupo reconhece que copiar respostas prontas sem entendimento pode prejudicar a aprendizagem e a defesa técnica do projeto.
+- revisão de todo conteúdo antes de inserir na documentação;
+- adaptação das sugestões à realidade do projeto;
+- discussão das decisões entre os integrantes;
+- manutenção da autoria da equipe sobre as decisões finais;
+- estudo dos conceitos utilizados no projeto;
+- organização das responsabilidades individuais;
+- uso do GitHub para registrar a evolução do trabalho;
+- preparação dos integrantes para explicar suas partes na defesa técnica.
 
-Dessa forma, a IA será utilizada como apoio, mas as decisões finais, a implementação, os testes e a apresentação serão responsabilidade dos integrantes da equipe.
+Cada integrante será responsável por compreender e defender o CRUD e as atividades sob sua responsabilidade.
 
 ---
 
-## 10. Responsabilidade dos Integrantes
-
-Cada integrante será responsável por compreender e defender tecnicamente sua parte do projeto.
+## 9. Responsabilidades da Equipe
 
 | Integrante | Papel no Grupo | CRUD Principal |
 |---|---|---|
@@ -158,10 +131,24 @@ Cada integrante será responsável por compreender e defender tecnicamente sua p
 | Emanulle Silva | Front-End | Reservas |
 | Adrian Felipe | Back-End | Ocorrências |
 
-A IA poderá apoiar todos os integrantes, mas cada aluno deverá entender e explicar sua própria contribuição no projeto.
+A ferramenta de IA poderá apoiar diferentes etapas do projeto, mas cada integrante deverá compreender a estrutura, a lógica e as decisões técnicas relacionadas à sua parte.
+
+---
+
+## 10. Reflexão Crítica
+
+O uso da Inteligência Artificial contribuiu principalmente para organizar melhor as ideias da equipe, revisar a documentação e esclarecer dúvidas durante a etapa de planejamento.
+
+A equipe entende que a ferramenta pode acelerar algumas atividades, mas também reconhece que seu uso exige análise crítica. Nem toda sugestão gerada foi aceita automaticamente. Algumas foram adaptadas, outras simplificadas e outras deixadas para versões futuras.
+
+O principal cuidado adotado foi evitar que a ferramenta substituísse o aprendizado dos integrantes. Por isso, as decisões finais, a modelagem, a implementação, os testes e a defesa técnica permanecem sob responsabilidade da equipe.
 
 ---
 
 ## 11. Conclusão
 
-O uso da Inteligência Artificial neste projeto será feito de forma ética, transparente e responsável. A ferramenta será utilizada como apoio para estudo, organização, revisão e melhoria do projeto, mas não substituirá a autoria, a participação e a compreensão técnica dos integrantes da equipe.
+A Inteligência Artificial foi utilizada como apoio no planejamento, documentação e revisão do projeto **MoradaSync**.
+
+Seu uso contribuiu para melhorar a organização inicial do trabalho, mas a construção do sistema, a validação das decisões e a compreensão técnica continuam sendo responsabilidades dos integrantes da equipe.
+
+O grupo manterá este documento atualizado conforme o projeto evoluir.
