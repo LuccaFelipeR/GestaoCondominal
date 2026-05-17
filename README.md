@@ -83,22 +83,20 @@ server.js
 
 As entidades previstas para o sistema são:
 
-- Usuários
-- Unidades
-- Moradores
-- Reservas
-- Ocorrências
-- Funcionários
-- Áreas Comuns
-- Tipos de Ocorrência
+- Usuários;
+- Unidades;
+- Moradores;
+- Reservas;
+- Ocorrências;
+- Funcionários.
 
 As entidades principais do CRUD serão:
 
-- Unidades
-- Moradores
-- Reservas
-- Ocorrências
-- Funcionários
+- Unidades;
+- Moradores;
+- Reservas;
+- Ocorrências;
+- Funcionários.
 
 A entidade **Usuários** será utilizada para autenticação e controle de acesso ao sistema.
 
@@ -122,10 +120,10 @@ A equipe utilizará **Scrum** como metodologia de organização do projeto, com 
 
 O quadro de tarefas será organizado com as seguintes colunas:
 
-- A Fazer
-- Em Desenvolvimento
-- Em Revisão
-- Concluído
+- A Fazer;
+- Em Desenvolvimento;
+- Em Revisão;
+- Concluído.
 
 A equipe trabalhará com backlog inicial, divisão de responsabilidades e acompanhamento das atividades durante as etapas do projeto.
 
@@ -166,30 +164,30 @@ O sistema será dividido em módulos, contemplando autenticação, gestão de mo
 | RF02 | Autenticação e Segurança | O sistema deve permitir logout do usuário autenticado. | Alta | Usuário autenticado | Deve existir um botão de sair para encerrar a sessão. |
 | RF03 | Autenticação e Segurança | O sistema deve proteger rotas privadas por meio de autenticação. | Alta | Usuário autenticado | A proteção será feita por middleware, impedindo acesso sem login. |
 | RF04 | Autenticação e Segurança | O sistema deve controlar permissões por tipo de usuário. | Alta | Administrador, Funcionário e Morador | O perfil Administrador terá acesso completo; os demais perfis terão acesso conforme suas permissões. |
-| RF05 | Gestão de Moradores | O sistema deve permitir cadastrar moradores. | Alta | Administrador | O cadastro poderá conter nome, CPF, telefone, e-mail e unidade vinculada. |
+| RF05 | Gestão de Moradores | O sistema deve permitir cadastrar moradores. | Alta | Administrador | O cadastro poderá conter nome, CPF, telefone, e-mail, data de nascimento, veículo e unidade vinculada. |
 | RF06 | Gestão de Moradores | O sistema deve permitir listar moradores cadastrados. | Alta | Administrador e Funcionário | A listagem deverá exibir os dados principais dos moradores. |
 | RF07 | Gestão de Moradores | O sistema deve permitir editar dados de moradores. | Alta | Administrador | A edição deve permitir atualizar informações cadastrais. |
-| RF08 | Gestão de Moradores | O sistema deve permitir buscar moradores por nome, unidade ou CPF. | Média | Administrador | A busca facilita a localização de registros. |
+| RF08 | Gestão de Moradores | O sistema deve permitir buscar moradores por nome, unidade ou CPF. | Média | Administrador e Funcionário | A busca facilita a localização de registros. |
 | RF09 | Gestão de Unidades | O sistema deve permitir cadastrar unidades do condomínio. | Alta | Administrador | O cadastro das unidades será realizado pela administração do condomínio. |
-| RF10 | Gestão de Unidades | O sistema deve permitir listar unidades cadastradas. | Alta | Administrador e Funcionário | A listagem deverá exibir número, bloco, tipo e status da unidade. |
-| RF11 | Gestão de Unidades | O sistema deve permitir editar unidades. | Alta | Administrador | A edição poderá alterar dados como bloco, número, tipo e status. |
+| RF10 | Gestão de Unidades | O sistema deve permitir listar unidades cadastradas. | Alta | Administrador e Funcionário | A listagem deverá exibir número, bloco, andar e status da unidade. |
+| RF11 | Gestão de Unidades | O sistema deve permitir editar unidades. | Alta | Administrador | A edição poderá alterar dados como bloco, número, andar e status. |
 | RF12 | Gestão de Unidades | O sistema deve permitir excluir ou inativar unidades. | Alta | Administrador | Recomenda-se inativação em vez de exclusão definitiva. |
 | RF13 | Gestão de Unidades | O sistema deve permitir vincular moradores às unidades. | Alta | Administrador | Uma unidade poderá possuir um ou mais moradores vinculados. |
-| RF14 | Reservas de Áreas Comuns | O sistema deve permitir cadastrar reservas de áreas comuns. | Alta | Morador ou Administrador | O morador poderá solicitar reserva de espaços como salão de festas ou churrasqueira. |
+| RF14 | Reservas de Áreas Comuns | O sistema deve permitir cadastrar reservas de áreas comuns. | Alta | Morador ou Administrador | O morador poderá solicitar reserva de espaços como salão de festas, churrasqueira ou quadra. |
 | RF15 | Reservas de Áreas Comuns | O sistema deve permitir listar reservas cadastradas. | Alta | Administrador e Funcionário | A administração poderá acompanhar as reservas realizadas. |
 | RF16 | Reservas de Áreas Comuns | O sistema deve permitir cancelar reservas. | Alta | Morador ou Administrador | O cancelamento deverá atualizar o status da reserva. |
-| RF17 | Reservas de Áreas Comuns | O sistema deve permitir cadastrar áreas comuns disponíveis para reserva. | Alta | Administrador | As áreas comuns podem ser pré-cadastradas na implantação do sistema. |
+| RF17 | Reservas de Áreas Comuns | O sistema deve permitir informar a área comum na reserva. | Alta | Morador ou Administrador | A área comum será registrada no campo `area` da reserva. |
 | RF18 | Reservas de Áreas Comuns | O sistema deve validar conflitos de data e horário ao criar reservas. | Média | Sistema | O sistema deve impedir duas reservas no mesmo espaço, data e horário. |
 | RF19 | Gestão de Ocorrências | O sistema deve permitir registrar ocorrências. | Alta | Morador, Funcionário ou Administrador | Ocorrências podem representar manutenção, reclamações ou sugestões. |
 | RF20 | Gestão de Ocorrências | O sistema deve permitir listar ocorrências cadastradas. | Alta | Funcionário e Administrador | A listagem ajudará no acompanhamento das solicitações. |
-| RF21 | Gestão de Ocorrências | O sistema deve permitir atualizar ocorrências. | Alta | Administrador ou Funcionário | A atualização poderá alterar descrição, status, responsável ou observações. |
+| RF21 | Gestão de Ocorrências | O sistema deve permitir atualizar ocorrências. | Alta | Administrador ou Funcionário | A atualização poderá alterar descrição, status, prioridade ou observações. |
 | RF22 | Gestão de Ocorrências | O sistema deve permitir finalizar ocorrências. | Alta | Administrador ou Funcionário | A finalização altera o status da ocorrência para resolvida ou concluída. |
-| RF23 | Gestão de Ocorrências | O sistema deve permitir cadastrar tipos de ocorrência. | Alta | Administrador | Exemplos: manutenção, reclamação, sugestão, limpeza e segurança. |
-| RF24 | Gestão de Funcionários | O sistema deve permitir cadastrar funcionários. | Alta | Administrador | O cadastro pode conter nome, CPF, cargo, telefone, e-mail e status. |
+| RF23 | Gestão de Ocorrências | O sistema deve permitir definir prioridade para ocorrências. | Média | Administrador ou Funcionário | A prioridade poderá ser baixa, média ou alta. |
+| RF24 | Gestão de Funcionários | O sistema deve permitir cadastrar funcionários. | Alta | Administrador | O cadastro pode conter nome, CPF, cargo, telefone, data de admissão, salário e status. |
 | RF25 | Gestão de Funcionários | O sistema deve permitir listar funcionários cadastrados. | Alta | Administrador | A listagem deverá exibir os principais dados dos funcionários. |
 | RF26 | Gestão de Funcionários | O sistema deve permitir editar dados de funcionários. | Alta | Administrador | A edição permite atualizar dados cadastrais e cargo. |
 | RF27 | Gestão de Funcionários | O sistema deve permitir inativar funcionários. | Alta | Administrador | Recomenda-se inativar em vez de excluir definitivamente. |
-| RF28 | Sistema Geral | O sistema deve controlar status de reservas, ocorrências, unidades e usuários. | Alta | Sistema | Os status ajudam no acompanhamento dos registros. |
+| RF28 | Sistema Geral | O sistema deve controlar status de reservas, ocorrências, unidades, funcionários e usuários. | Alta | Sistema | Os status ajudam no acompanhamento dos registros. |
 | RF29 | Sistema Geral | O sistema deve validar campos obrigatórios nos formulários. | Alta | Sistema | Campos essenciais não devem ser enviados vazios. |
 | RF30 | Sistema Geral | O sistema deve possuir menu de navegação entre os módulos. | Alta | Usuário autenticado | O menu deve permitir acesso às principais telas do sistema. |
 | RF31 | Sistema Geral | O sistema deve permitir visualizar detalhes dos registros cadastrados. | Média | Usuário autenticado | Cada módulo poderá ter uma tela ou botão de detalhes. |
@@ -207,16 +205,16 @@ Algumas funcionalidades foram analisadas pela equipe, mas não farão parte do M
 | MF01 | Autenticação e Segurança | Recuperação de senha via e-mail, SMS ou WhatsApp. | Média | Exige integração externa e será considerada em versão futura. |
 | MF02 | Gestão de Ocorrências | Anexar imagens às ocorrências. | Média | Pode exigir upload de arquivos e controle de armazenamento. |
 | MF03 | Gestão de Ocorrências | Visualizar histórico completo de ocorrências por unidade. | Média | Pode ser implementado após o CRUD principal estar funcionando. |
-| MF04 | Gestão de Ocorrências | Definir prioridade para ocorrências. | Média | Funcionalidade útil, mas não essencial para o MVP. |
+| MF04 | Gestão de Ocorrências | Cadastrar tipos de ocorrência em tabela separada. | Média | Pode ser incluído futuramente para melhorar a classificação das ocorrências. |
 | MF05 | Controle de Visitantes | Cadastrar visitantes com data e hora de entrada. | Média | Módulo fora do escopo principal da primeira versão. |
 | MF06 | Controle de Visitantes | Registrar saída de visitantes. | Média | Depende do módulo de visitantes, que ficará para versão futura. |
-| MF07 | Gestão de Veículos | Cadastrar veículos vinculados aos moradores. | Média | Pode ser incluído futuramente como expansão do cadastro de moradores. |
-| MF08 | Gestão de Veículos | Listar veículos por unidade ou morador. | Média | Depende do cadastro de veículos. |
-| MF09 | Comunicação | Cadastrar avisos e comunicados. | Média | Funcionalidade interessante, mas não essencial para a entrega inicial. |
-| MF10 | Comunicação | Registrar entregas e encomendas para moradores. | Média | Módulo adicional, fora do escopo principal. |
-| MF11 | Comunicação | Notificar moradores sobre entregas recebidas. | Baixa | Exige sistema de notificação. |
-| MF12 | Fornecedores | Cadastrar fornecedores e prestadores de serviço. | Baixa | Pode ser implementado após a conclusão dos CRUDs principais. |
-| MF13 | Relatórios | Gerar relatórios de reservas por período. | Baixa | Pode ser incluído se houver tempo após o MVP. |
+| MF07 | Gestão de Veículos | Criar CRUD específico para veículos vinculados aos moradores. | Média | No MVP, os dados do veículo serão armazenados diretamente no cadastro do morador. |
+| MF08 | Comunicação | Cadastrar avisos e comunicados. | Média | Funcionalidade interessante, mas não essencial para a entrega inicial. |
+| MF09 | Comunicação | Registrar entregas e encomendas para moradores. | Média | Módulo adicional, fora do escopo principal. |
+| MF10 | Comunicação | Notificar moradores sobre entregas recebidas. | Baixa | Exige sistema de notificação. |
+| MF11 | Fornecedores | Cadastrar fornecedores e prestadores de serviço. | Baixa | Pode ser implementado após a conclusão dos CRUDs principais. |
+| MF12 | Relatórios | Gerar relatórios de reservas por período. | Baixa | Pode ser incluído se houver tempo após o MVP. |
+| MF13 | Reservas de Áreas Comuns | Criar tabela específica para áreas comuns. | Média | No MVP, a área comum será registrada como campo da tabela `reservas`. |
 
 ---
 
@@ -247,52 +245,40 @@ O sistema **MoradaSync** possuirá entidades relacionadas entre si, garantindo q
 
 | Entidade Origem | Relacionamento | Entidade Destino | Tipo |
 |---|---|---|---|
+| Usuário | pode estar vinculado a | Morador | 1:1 |
+| Usuário | pode estar vinculado a | Funcionário | 1:1 |
 | Unidade | possui | Moradores | 1:N |
 | Morador | pertence a | Unidade | N:1 |
 | Morador | realiza | Reservas | 1:N |
 | Reserva | pertence a | Morador | N:1 |
-| Área Comum | possui | Reservas | 1:N |
-| Reserva | pertence a | Área Comum | N:1 |
-| Morador | registra | Ocorrências | 1:N |
-| Ocorrência | pertence a | Morador | N:1 |
-| Funcionário | atende | Ocorrências | 1:N |
-| Ocorrência | pode ser atendida por | Funcionário | N:1 |
-| Tipo de Ocorrência | classifica | Ocorrências | 1:N |
-| Ocorrência | pertence a | Tipo de Ocorrência | N:1 |
-| Usuário | acessa | Sistema | Autenticação |
+| Usuário | registra ou acompanha | Ocorrências | 1:N |
+| Ocorrência | pertence a | Usuário | N:1 |
 
 ### Descrição dos Relacionamentos
 
+- Um usuário pode estar vinculado a um morador.
+- Um usuário pode estar vinculado a um funcionário.
 - Uma unidade pode possuir vários moradores.
 - Um morador pertence a uma unidade.
 - Um morador pode realizar várias reservas.
 - Uma reserva pertence a um morador.
-- Uma área comum pode possuir várias reservas ao longo do tempo.
-- Uma reserva pertence a uma área comum.
-- Um morador pode registrar várias ocorrências.
-- Uma ocorrência pertence a um morador.
-- Um funcionário pode atender várias ocorrências.
-- Uma ocorrência pode ser atribuída a um funcionário.
-- Um tipo de ocorrência pode classificar várias ocorrências.
-- Uma ocorrência pertence a um tipo de ocorrência.
-- Um usuário autenticado pode acessar as rotas privadas do sistema.
+- Um usuário pode registrar ou acompanhar várias ocorrências.
+- Uma ocorrência pertence a um usuário.
 
 ---
 
 ## 15. MER/DER
 
-O Modelo Entidade-Relacionamento e o Diagrama Entidade-Relacionamento serão utilizados para representar as entidades principais do sistema, seus atributos e relacionamentos.
+O Modelo Entidade-Relacionamento e o Diagrama Entidade-Relacionamento foram criados para representar as entidades principais do sistema, seus atributos e relacionamentos.
 
 As principais entidades modeladas são:
 
 - Usuários;
 - Unidades;
 - Moradores;
-- Reservas;
-- Áreas Comuns;
+- Funcionários;
 - Ocorrências;
-- Tipos de Ocorrência;
-- Funcionários.
+- Reservas.
 
 O DER será utilizado como base para a criação das tabelas no PostgreSQL.
 
@@ -303,6 +289,180 @@ Exemplo de inserção da imagem no GitHub:
 ```md
 ![DER do Sistema](./docs/der-moradasync.png)
 ```
+
+---
+
+## 15.1 Documentação das Tabelas do Banco de Dados
+
+A modelagem do banco de dados do sistema **MoradaSync** foi estruturada com base nas principais entidades do domínio de Gestão Condominial. O banco será implementado em **PostgreSQL** e utilizará chaves primárias e estrangeiras para representar os relacionamentos entre as tabelas.
+
+As tabelas previstas no DER são:
+
+- Usuários;
+- Unidades;
+- Moradores;
+- Funcionários;
+- Ocorrências;
+- Reservas.
+
+---
+
+### Tabela: usuarios
+
+A tabela `usuarios` será responsável por armazenar os dados de autenticação e controle de acesso ao sistema.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_usuario | Integer | PK | Identificador único do usuário. |
+| nome | Varchar(100) | NOT NULL | Nome do usuário do sistema. |
+| email | Varchar(120) | NOT NULL, UNIQUE | E-mail utilizado para login. |
+| senha_hash | Varchar(255) | NOT NULL | Senha criptografada do usuário. |
+| tipo_usuario | Varchar(30) | NOT NULL | Perfil do usuário, como ADMIN, FUNCIONARIO ou MORADOR. |
+| ativo | Boolean | NOT NULL | Indica se o usuário está ativo no sistema. |
+
+#### Finalidade
+
+Essa tabela será utilizada para login, logout, controle de sessão e permissões de acesso às rotas privadas do sistema.
+
+---
+
+### Tabela: unidades
+
+A tabela `unidades` será responsável por armazenar as unidades habitacionais do condomínio, como apartamentos ou casas.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_unidade | Integer | PK, Auto Increment | Identificador único da unidade. |
+| bloco | Varchar(10) | NOT NULL | Bloco onde a unidade está localizada. |
+| numero | Varchar(10) | NOT NULL | Número da unidade. |
+| andar | Integer | NOT NULL | Andar da unidade dentro do bloco. |
+| status | Varchar(20) | NOT NULL, DEFAULT | Status da unidade, como ativa, ocupada, vaga ou inativa. |
+
+#### Finalidade
+
+Essa tabela permite controlar as unidades existentes no condomínio e servirá como base para vincular moradores.
+
+#### Regra complementar
+
+A combinação entre `bloco` e `numero` deve ser única, evitando duplicidade de unidades no mesmo bloco.
+
+---
+
+### Tabela: moradores
+
+A tabela `moradores` será responsável por armazenar os dados dos moradores vinculados às unidades do condomínio.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_morador | Integer | PK | Identificador único do morador. |
+| nome | Varchar(100) | NOT NULL | Nome completo do morador. |
+| cpf | Varchar(14) | UNIQUE | CPF do morador. |
+| telefone | Varchar(20) | NOT NULL | Telefone de contato do morador. |
+| email | Varchar(120) | UNIQUE | E-mail do morador. |
+| data_nascimento | Date | NULL | Data de nascimento do morador. |
+| placa_carro | Varchar(20) | NULL | Placa do veículo do morador, quando houver. |
+| car_model | Varchar(30) | NULL | Modelo do veículo do morador, quando houver. |
+| id_unidade | Integer | FK | Identificador da unidade à qual o morador pertence. |
+| id_usuario | Integer | FK | Identificador do usuário vinculado ao morador. |
+
+#### Finalidade
+
+Essa tabela permite cadastrar moradores, vinculá-los às unidades e relacioná-los a reservas.
+
+---
+
+### Tabela: funcionarios
+
+A tabela `funcionarios` será responsável por armazenar os dados dos funcionários do condomínio.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_funcionario | Integer | PK | Identificador único do funcionário. |
+| nome | Varchar(100) | NOT NULL | Nome completo do funcionário. |
+| cpf | Varchar(14) | UNIQUE | CPF do funcionário. |
+| cargo | Varchar(80) | NOT NULL | Cargo exercido pelo funcionário. |
+| telefone | Varchar(20) | NOT NULL | Telefone de contato do funcionário. |
+| data_admissao | Date | NOT NULL | Data de admissão do funcionário. |
+| data_demissao | Date | NULL | Data de desligamento do funcionário, se houver. |
+| salario | Decimal(10,2) | NOT NULL | Salário do funcionário. |
+| status | Varchar(20) | NOT NULL | Status do funcionário, como ativo ou inativo. |
+| id_usuario | Integer | FK | Identificador do usuário vinculado ao funcionário. |
+
+#### Finalidade
+
+Essa tabela permite gerenciar os funcionários do condomínio, seus dados cadastrais, cargo, status e vínculo com usuário do sistema.
+
+---
+
+### Tabela: ocorrencias
+
+A tabela `ocorrencias` será responsável por armazenar registros de problemas, solicitações, reclamações ou situações internas do condomínio.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_ocorrencia | Integer | PK | Identificador único da ocorrência. |
+| titulo | Varchar(150) | NOT NULL | Título resumido da ocorrência. |
+| descricao | Varchar | NOT NULL | Descrição detalhada da ocorrência. |
+| data_abertura | Datetime | NOT NULL | Data e hora em que a ocorrência foi aberta. |
+| data_fechamento | Datetime | NULL | Data e hora em que a ocorrência foi finalizada. |
+| status | Varchar(20) | NOT NULL | Status da ocorrência, como aberta, em andamento ou finalizada. |
+| prioridade | Varchar(20) | NOT NULL | Prioridade da ocorrência, como baixa, média ou alta. |
+| id_usuario | Integer | FK | Usuário responsável pelo registro ou acompanhamento da ocorrência. |
+
+#### Finalidade
+
+Essa tabela permite registrar e acompanhar ocorrências do condomínio, controlando status, prioridade, data de abertura e data de fechamento.
+
+---
+
+### Tabela: reservas
+
+A tabela `reservas` será responsável por armazenar as reservas de áreas comuns do condomínio.
+
+| Campo | Tipo | Restrições | Descrição |
+|---|---|---|---|
+| id_reserva | Integer | PK | Identificador único da reserva. |
+| area | Varchar(100) | NOT NULL | Área comum reservada, como salão de festas, churrasqueira ou quadra. |
+| data_reserva | Date | NOT NULL | Data da reserva. |
+| horario_inicio | Time | NOT NULL | Horário de início da reserva. |
+| horario_fim | Time | NOT NULL | Horário de término da reserva. |
+| status | Varchar(20) | NOT NULL | Status da reserva, como pendente, aprovada, cancelada ou concluída. |
+| id_morador | Integer | FK | Morador responsável pela reserva. |
+
+#### Finalidade
+
+Essa tabela permite controlar reservas feitas pelos moradores para uso de áreas comuns do condomínio.
+
+---
+
+## 15.2 Relacionamentos Representados no DER
+
+O DER do sistema apresenta relacionamentos entre as entidades para garantir que os dados estejam conectados de forma coerente.
+
+| Relacionamento | Descrição | Tipo |
+|---|---|---|
+| Usuários e Funcionários | Um usuário pode estar vinculado a um funcionário do sistema. | 1:1 |
+| Usuários e Moradores | Um usuário pode estar vinculado a um morador do sistema. | 1:1 |
+| Unidades e Moradores | Uma unidade pode possuir vários moradores. | 1:N |
+| Moradores e Reservas | Um morador pode realizar várias reservas. | 1:N |
+| Usuários e Ocorrências | Um usuário pode registrar ou acompanhar várias ocorrências. | 1:N |
+
+---
+
+## 15.3 Regras de Negócio Relacionadas ao Banco de Dados
+
+A partir da modelagem definida no DER, foram estabelecidas algumas regras de negócio:
+
+- Cada usuário deve possuir um e-mail único para autenticação.
+- As senhas dos usuários devem ser armazenadas em formato criptografado/hash.
+- Cada unidade pode estar vinculada a um ou mais moradores.
+- Cada morador pertence a uma unidade.
+- Cada morador pode realizar várias reservas de áreas comuns.
+- Cada reserva deve possuir data, horário de início, horário de fim e status.
+- O sistema deve evitar conflito de reservas para a mesma área, data e horário.
+- Cada ocorrência deve possuir título, descrição, status e data de abertura.
+- Ocorrências podem ser registradas ou acompanhadas por usuários do sistema.
+- Funcionários e unidades devem ser preferencialmente inativados, em vez de excluídos definitivamente.
 
 ---
 
@@ -355,7 +515,7 @@ O backlog inicial foi organizado com base nas entregas da N1 e nas próximas eta
 | BK02 | Criar README.md inicial | Lucca Felipe | Alta | Concluído |
 | BK03 | Criar arquivo USO_IA.md | Lucca Felipe | Alta | Em Desenvolvimento |
 | BK04 | Definir requisitos funcionais | Equipe | Alta | Em Revisão |
-| BK05 | Definir requisitos não funcionais | Equipe | Alta | A Fazer |
+| BK05 | Definir requisitos não funcionais | Equipe | Alta | Em Revisão |
 | BK06 | Revisar entidades do sistema | Matheus Albertini | Alta | Em Desenvolvimento |
 | BK07 | Finalizar MER/DER | Matheus Albertini | Alta | Em Desenvolvimento |
 | BK08 | Definir relacionamentos entre entidades | Matheus Albertini | Alta | Em Revisão |
@@ -420,7 +580,7 @@ O MVP contempla:
 - Validação mínima de formulários;
 - Documentação técnica no GitHub.
 
-Funcionalidades mais complexas, como notificações, recuperação de senha, anexos, visitantes, veículos, encomendas e relatórios avançados, serão consideradas melhorias futuras.
+Funcionalidades mais complexas, como notificações, recuperação de senha, anexos, visitantes, veículos, encomendas, fornecedores, áreas comuns em tabela própria, tipos de ocorrência em tabela própria e relatórios avançados, serão consideradas melhorias futuras.
 
 ---
 
