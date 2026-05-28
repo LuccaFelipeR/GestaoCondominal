@@ -1,0 +1,13 @@
+{
+  "name": "condosys",
+  "version": "1.0.0",
+  "description": "Sistema de gerenciamento de condomínio",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
